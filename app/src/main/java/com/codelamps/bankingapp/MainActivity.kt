@@ -5,9 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -34,7 +37,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    HomeScreen
+                    HomeScreen()
 
                 }
             }
@@ -68,12 +71,13 @@ private fun SetBarColor(color : Color){
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 @Preview
 fun HomeScreen() {
     Scaffold(
         bottomBar = {
-
+            BottomNavigationBar()
         }
     ) {
         padding ->
@@ -89,10 +93,13 @@ fun HomeScreen() {
 
 
 
-        // WalletSection
-        // Cards Section
+         WalletSection()
         Spacer(modifier = Modifier.height(16.dp))
-        // Finance Section
+         CardsSection()
+         FinanceSection()
         // Currency Section
     }
 }
+
+
+

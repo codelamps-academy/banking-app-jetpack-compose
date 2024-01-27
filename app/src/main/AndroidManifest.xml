@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BankingApp"
         tools:targetApi="31">
         <activity
+            android:name=".Contoh"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
