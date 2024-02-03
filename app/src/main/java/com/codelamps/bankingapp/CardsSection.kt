@@ -118,7 +118,7 @@ fun CardItem(
                 modifier = Modifier.width(60.dp)
             )
 
-            Spacer(modifier = Modifier.height(10.dp))
+//            Spacer(modifier = Modifier.height(10.dp))
 
             Text(
                 text = card.cardName,

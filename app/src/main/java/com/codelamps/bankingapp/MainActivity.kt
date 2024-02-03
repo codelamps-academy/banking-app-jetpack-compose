@@ -62,7 +62,7 @@ class MainActivity : ComponentActivity() {
 //}
 
 @Composable
-private fun SetBarColor(color : Color){
+private fun SetBarColor(color: Color) {
     val systemUiController = rememberSystemUiController()
     SideEffect {
         systemUiController.setSystemBarsColor(
@@ -79,25 +79,20 @@ fun HomeScreen() {
         bottomBar = {
             BottomNavigationBar()
         }
-    ) {
-        padding ->
+    ) { padding ->
 
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
         ) {
-
+            WalletSection()
+//            Spacer(modifier = Modifier.height(16.dp))
+            CardsSection()
+            FinanceSection()
+            CurrenciesSection()
         }
 
-
-
-
-         WalletSection()
-        Spacer(modifier = Modifier.height(16.dp))
-         CardsSection()
-         FinanceSection()
-        // Currency Section
     }
 }
 
